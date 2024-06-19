@@ -1,0 +1,32 @@
+.main{
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 700px){
+	.main{
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+.card1{
+	margin-left: 5%;
+}
+@media (max-width: 700px){
+	.card1{
+		margin-left: 10%;
+	}
+}
+.card2{
+	margin-left: 5%;
+}
+@media (max-width: 700px){
+	.card2{
+		margin-top: 10%;
+		margin-left: 10%;
+	}
+}
+footer{
+	margin-top: 3%;
+}

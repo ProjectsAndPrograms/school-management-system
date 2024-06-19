@@ -1,0 +1,105 @@
+
+.card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e5e9f2;
+    border-radius: .2rem;
+}
+/* #profile-data{
+    background: url(images/background-file.jpg);
+    background-position: center; Center the image 
+    background-size: cover; 
+
+
+} */
+.card-header:first-child {
+    border-radius: calc(.2rem - 1px) calc(.2rem - 1px) 0 0;
+}
+.card-header {
+    border-bottom-width: 1px;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e9f2;
+}
+.setting-function-btns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.setting-function-btns button{
+   
+    box-shadow: 5px 5px 20px 2px rgb(130, 221, 248);
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.upload-btn{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+.upload-btn .bx{
+   font-size: 30px;
+
+}
+.user-info{
+    display: flex;
+    align-items: baseline;
+ 
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0;
+    padding: 0;
+  
+}
+.user-info h4 {
+    padding-left: 10px;
+    
+   
+}
+.user-info h3{
+    margin: 0;
+    padding: 0 10px;
+    width: fit-content;
+    font-size: 30px;
+    border: none;
+    font-weight: bold;
+}
+.user-info p{
+    margin-left: 10px;
+    font-size: larger;
+    justify-content: center;
+}
+.edit-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

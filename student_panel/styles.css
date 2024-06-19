@@ -1,0 +1,48 @@
+.container{
+	height: auto;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border: 1px solid lightgrey;
+	border-radius: 8px;
+	margin-top: 3%;
+}
+.bus{
+	position: relative;
+	height: auto;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+.position{
+	height: auto;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid lightgrey;
+	border-radius: 8px;
+	margin-top: 3%;
+	margin-left: 10%;
+	padding: 20px;
+}
+.position .l1{
+	height: 50px;
+	width: 50px;
+	border: 1px solid green;
+	background-image: url('images/bus.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	padding: 15px;
+	margin-top: 80px;
+}
+
+.l1 h6{
+	margin-left: 80px;
+	
+}
