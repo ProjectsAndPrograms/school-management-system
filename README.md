@@ -5,7 +5,7 @@ PHP School management system developed for schools or small institutes. You can 
   1. PHP (8.2)
   2. MySQL database
   3. Bootstrap 5
-  4. JQery, JavaScript
+  4. JQuery, JavaScript
   5. HTML, CSS
 
 ## 💡 FEATURES 
