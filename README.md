@@ -19,7 +19,7 @@ PHP School management system developed for schools or small institutes. You can 
   8. Syllabus upload / update
   9. Time table
   10. Attendence Management
-  11. Password change
+  11. Password reset, Forgot password
   12. Front Page
   13. Single login
   14. Dark theme support
