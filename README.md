@@ -2,7 +2,7 @@
 PHP School management system developed for schools or small institutes. You can use this to maintain record's related to students, teachers, and other.
 
 ## 🥏 Technolgies Used 
-  1. PHP (8.2)
+  1. PHP (8.2) 
   2. MySQL database
   3. Bootstrap 5
   4. JQuery, JavaScript
