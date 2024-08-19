@@ -120,14 +120,14 @@
                     </div>
 
                 </div>
-                <div class="col-12 col-md-8 d-flex mt-3 justify-content-center">
+                <div class="col-12 col-md-8 d-flex mt-3 p-0 justify-content-center">
 
-                    <div class="row" style="max-width: 523px;">
+                    <div class="row w-100" >
 
                         <div class="container">
 
                             <div class="card border-0 rounded-0 card-messages mt-3" style="width: 100%;">
-                                <div class="mt-3">
+                                <div class="mt-3">   
 
 
                                     <h6 class="ms-2">Feedbacks</h6>

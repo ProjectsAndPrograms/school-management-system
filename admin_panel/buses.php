@@ -18,15 +18,16 @@
                     <li><a href="#">
                         </a></li>
                 </ul>
-                <!-- Button trigger modal -->
-                 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" id="bus-request" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 6%; margin-bottom: 7%;">
-  <i class="fas fa-bus"></i> Bus Requests
-</button>
+            
+            <div class="d-flex mx-3 mb-3" style="grid-gap: 10px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary" id="bus-request" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fas fa-bus"></i> Bus Requests
+                </button>
 
-<button type="button" class="btn btn-primary" id="bus-request" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-left: 6%; margin-bottom: 7%; background-color: green; border: none; font-size: 12px; padding-top: 10px; padding-bottom: 10px;">
-  <i class="fas fa-bus"></i> Accepted Requests
-</button>
+                <button type="button" class="btn btn-success" id="bus-request" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <i class="fas fa-bus"></i> Accepted Requests
+                </button>
+            </div>
 
 
 <!-- Modal -->

@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+ include("../../assets/config.php");
 
 // Assuming you've already sanitized the search term
 $search = $_POST['search'];

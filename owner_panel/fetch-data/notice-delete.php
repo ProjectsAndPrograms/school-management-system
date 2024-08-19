@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+ include("../../assets/config.php");
 
 // Assuming noticeId is sent via POST method
 $id = $_POST['noticeId'];

@@ -21,6 +21,7 @@ if (isset($_POST['id']) && isset($_SESSION['uid'])) {
         while ($row = mysqli_fetch_assoc($result)) {
             $data['status'] = "success";
             $data["name"] = ucfirst(strtolower($row["fname"])) . " " . strtolower($row['lname']);
+            $row['image'] = "../studentUploads/".$row['image'];
             $data["image"] = file_exists($row['image']) ? $row['image'] : "../images/user.png";
 
             $dobString = $row["dob"];

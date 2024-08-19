@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+include('../assets/config.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +56,13 @@ if(mysqli_num_rows($result) > 0) {
     echo "<div class='position border-0 pb-5 shadow'><h3>Bus Stops</h3>";
 
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<div class='l1'><h6 style='font-size: 15px; font-family: Arial, Helvetica, sans-serif;'>{$row['location']}</h6> <h7 style='font-size: 15px; font-family: Arial, Helvetica, sans-serif; margin-bottom: 40px; margin-left: -90px'> {$row['arrival_time']}</h7></div>";
+        
+        echo "<div class='d-flex mt-5 mb-1 align-items-center justify-content-center'>
+              <h6 style='width: 150px; text-align: right;'>{$row['arrival_time']}</h6>
+              <img class='mx-3' src='images/bus.png' alt='Bus icon' width='60px'>
+              <h6  style='width: 150px; text-align: left;'>{$row['location']}</h6>
+          </div>"
+          ;
     }
 
     echo "</div>";
@@ -64,6 +70,7 @@ if(mysqli_num_rows($result) > 0) {
     echo "<center>There is no route defined for this bus yet.</center>";
 }
 ?>
+
 
 
 </body>

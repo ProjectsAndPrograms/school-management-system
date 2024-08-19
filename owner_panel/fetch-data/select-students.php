@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+ include("../../assets/config.php");
 $class = $_POST['select'];
 if($class!=""){
     $sql = "SELECT * FROM students WHERE class='" . $class . "'";

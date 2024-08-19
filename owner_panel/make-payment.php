@@ -6,7 +6,7 @@ include('./fetch-data/verfyRoleRedirect.php');
 error_reporting(0);
 ?>
 <?php
-  include('config.php'); 
+  include("../assets/config.php");
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,5 @@
 <?php
- include('config.php');
+ include("../../assets/config.php");
  $sql="select * from teachers";
  $result=mysqli_query($conn,$sql);
  if(mysqli_num_rows($result)>0){

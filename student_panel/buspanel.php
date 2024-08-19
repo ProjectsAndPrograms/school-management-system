@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+include('../assets/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ include('database.php');
         </div>
     </nav>
 
-    <div class="container mt-4 border-0 p-3 shadow">
+    <div class="container mt-4 border-0 p-3 shadow border-0">
         <?php
 session_start();
 
@@ -105,7 +105,7 @@ if (mysqli_num_rows($result) > 0) {
         if ($result && mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "
-                <div class='container shadow' style='margin: 0; width: 100%; margin-bottom: 5%'>
+                <div class='container shadow border-0' style='margin: 0; width: 100%; margin-bottom: 20px; border-left: 4px solid #54cb54 !important;'>
                 <a href='buslocation.php?bus_id={$row['bus_id']}' class='text-decoration-none text-dark'>
                         <div class='d-flex align-items-center'>
                             <div class='bus-icon'></div>

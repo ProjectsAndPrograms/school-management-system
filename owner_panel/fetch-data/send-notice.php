@@ -1,9 +1,9 @@
 <?php
-include('config.php');
+include("../../assets/config.php");
 
 // Assuming form is submitted via POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+    // Retrieve form data 
     $panel = mysqli_real_escape_string($conn, $_POST['panel']);
     $class = mysqli_real_escape_string($conn, $_POST['cla']);
     $title = mysqli_real_escape_string($conn, $_POST['title']);
@@ -23,4 +23,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handle case where form is not submitted via POST
     echo "Form submission method not recognized.";
 }
-?>

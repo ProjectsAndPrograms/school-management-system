@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+include('../assets/config.php');
 $response = array();
 session_start();
 

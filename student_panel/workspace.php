@@ -6,7 +6,7 @@
 <?php 
 
     // session_start();
- include('database.php');
+    include('../assets/config.php');
  error_reporting(0);
  ?>
 <!DOCTYPE html>
@@ -108,11 +108,6 @@ body::-webkit-scrollbar {
   background-color: #363949;
 }
 
-#myTable tr.header, #myTable tr:hover{
-
- 
- 
-}
  #myTable tr:hover{
     background-color: #779ca6;
  }
