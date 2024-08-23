@@ -122,21 +122,21 @@ function getEmailObject($reciever, $otp){
     
     
     $title = 'OTP Verification email';
-    $message = '<h3>OTP Verification email</h3><p>Your one time password is <b>'.$otp.'</b>. Stay connected with Avyukt core technologies.</p><p>This email is computer generated so please do not reply this email.</p>';
+    $message = '<h3>OTP Verification email</h3><p>Your one time password is <b>'.$otp.'</b>. Stay connected with Us.</p><p>This email is computer generated so please do not reply this email.</p>';
     
     $mail = new PHPMailer(true);
     
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'avyuktcoretech@gmail.com';
-    $mail->Password = 'jnbyvrsfronvuact'; 
+    $mail->Username = 'erp.schoolmanagementsystem@gmail.com';
+    $mail->Password = 'whqbysomdhdjthvr'; 
     $mail->SMTPSecure = 'tls';  
     $mail->Port = 587;
     
-    $mail->setFrom('avyuktcoretech@gmail.com');
+    $mail->setFrom('erp.schoolmanagementsystem@gmail.com');
     $mail->addAddress(''.$reciever);
-    
+  
     $mail->isHTML(true);
     
     $mail->Subject = $title;
