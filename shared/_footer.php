@@ -7,7 +7,7 @@
           <!-- Display visitor count -->
           <p>SCHOOL MANAGEMENT SYSTEM</p>
           <!-- Display time zone -->
-          <p>Q9P3+75H, Fake Nagar, My ciry, Delhi 110047</p>
+          <p>Q9P3+75H, My Town, My city, My Country </p>
         </div>
         <div class="col-md-4">
           <p>Time Zone: <?php
