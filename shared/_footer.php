@@ -5,16 +5,12 @@
           <!-- Insert website logo -->
           <img src="images/company-logo.jpg" alt="Website Logo">
           <!-- Display visitor count -->
-          <p>SCHOOL MANAGEMENT SYSTEM</p>
+          <p>KelaSYS</p>
           <!-- Display time zone -->
-          <p>Q9P3+75H, My Town, My city, My Country </p>
+          <p>+243 851 771 404 </p>
         </div>
         <div class="col-md-4">
-          <p>Time Zone: <?php
-                        date_default_timezone_set('Asia/Kolkata');
-                        $current_time = date('D M d Y H:i:s \G\M\TO (T)');
-                        echo "<p>$current_time</p>";
-                        ?></p>
+          <p>Time Zone: GMT + 1</p>
         </div>
         <div class="col-md-4">
           <div class="footer-links">
@@ -31,7 +27,7 @@
       </div>
       <div class="row mt-4">
         <div class="col-md-12">
-          <p>&copy; <?php echo date('Y'); ?> By <a href="https://www.github.com/ProjectsAndPrograms" target="_blank">ProjectsAndPrograms</a>. All rights reserved.</p>
+          <p>&copy; <?php echo date('Y'); ?> By <a href="https://www.github.com/ProjectsAndPrograms" target="_blank">ETS AXYS</a>. All rights reserved.</p>
         </div>
       </div>
     </div>
