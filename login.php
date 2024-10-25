@@ -39,7 +39,7 @@ if (isset($_SESSION['uid'])) {
 
 <head>
   <meta charset="UTF-8">
-  <title>School Management</title>
+  <title>KelaSYS</title>
   <!-- Fontawesome CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +56,8 @@ if (isset($_SESSION['uid'])) {
       <div class="front">
         <img src="images/loginimage.jpg" alt="">
         <div class="text">
-          <span class="text-1">SCHOOL MANAGEMENT SYSTEM<br></span>
-          <span class="text-2">Plan serve program</span>
+          <span class="text-1">Gestion d'établissement<br></span>
+          <span class="text-2">Digitalisons l'éducation</span>
         </div>
       </div>
 
@@ -66,7 +66,7 @@ if (isset($_SESSION['uid'])) {
       <div class="form-content">
         <div class="login-form">
 
-          <div class="title" id='board-title'>Login</div>
+          <div class="title" id='board-title'>Connexion</div>
 
           <div class="alert-box">
             <div class="alert alert-danger text-center mt-3" role="alert" id="error-msg">
@@ -78,14 +78,14 @@ if (isset($_SESSION['uid'])) {
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="email" placeholder="Enter your email" id='loginEmail' required>
+                <input type="email" name="email" placeholder="Votre email" id='loginEmail' required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" placeholder="Enter your password" id="password" required>
+                <input type="password" name="password" placeholder="Votre mot de passe" id="password" required>
                 <i class="bi bi-eye-fill" style="margin-left:auto;margin-right: 6px;" id="togglePassword"></i>
               </div>
-              <div class="text"><a id="forgotpassword">Forgot password?</a></div>
+              <div class="text"><a id="forgotpassword">Mot de passe oublié?</a></div>
               <div class="button input-box">
                 <button type="submit" class="btn">
                   Submit

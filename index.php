@@ -11,15 +11,14 @@
             <div class=" d-flex justify-content-center align-items-center">
               <div>
                 <div class="big-title">
-                  <h1>Future is here,</h1>
-                  <h1>Start Exploring now.</h1>
+                  <h1>KelaSYS</h1>
+                  <h1>Le numérique au service de l'éducation</h1>
                 </div>
                 <p class="text">
-                  streamline processes, manage resources, track student data, facilitate
-                  communication, and enhance administrative tasks effectively.
+                  Digitaliser la gestion de votre établissement
                 </p>
                 <div class="cta">
-                  <a href="login.php" class="btn">Get started</a>
+                  <a href="login.php" class="btn">Démarrer</a>
                 </div>
 
 
@@ -35,7 +34,7 @@
       </div>
 
 
-  <?php include('shared/feature-cards.php'); ?>
+ <!--  <?php include('shared/feature-cards.php'); ?>
       
 
       <div class="container mt-3">
@@ -71,7 +70,7 @@
 
 
   </main>
-
+ -->
 
 
 
