@@ -151,6 +151,10 @@ body::-webkit-scrollbar {
                 <span class="material-icons-sharp">description</span>
                 <h3>Workspace</h3>
             </a>
+            <a href="security_edu.php">
+                <span class="material-icons-sharp">security</span>
+                <h3>Security Education</h3>
+            </a>
             <a href="password.php">
                 <span class="material-icons-sharp">password</span>
                 <h3>Change Password</h3>
