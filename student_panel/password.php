@@ -137,12 +137,10 @@
             <!--<a href="#"><p>Forget password?</p></a>-->
         </form> 
         <?php
-
-            
-               
-             $password=$_POST['current'];
-             $newpassword=$_POST['new'];
-             $confirmnewpassword=$_POST['repeat'];
+             // Sanitizes Input Field   
+             $password = htmlspecialchars($_POST['current'], ENT_QUOTES, 'UTF-8');
+             $newpassword = htmlspecialchars($_POST['new'], ENT_QUOTES, 'UTF-8');
+             $confirmnewpassword = htmlspecialchars($_POST['repeat'], ENT_QUOTES, 'UTF-8');
             $result = mysqli_query($conn,"SELECT password_hash FROM users WHERE id='$id'");
             if($result->num_rows > 0){
                 $row = $result->fetch_assoc();
