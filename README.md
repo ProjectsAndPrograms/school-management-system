@@ -119,6 +119,8 @@ PHP School management system developed for schools or small institutes. You can 
    <br> Visit to the given URL to see the running website
 
 ## Important Message 
+The `conf` folder is supposed to be placed under `xampp/apache/conf` for setting up the HTTPS connection. Ensure this is done correctly to avoid configuration issues.
+
 <b>Cut and paste </b> the two file that are named as shown below in the root directory (C:\xampp\htdocs) before running the application </b> <br>
    <br> 1. .htaccess </br>
    <br> 2. page-not-found.html
