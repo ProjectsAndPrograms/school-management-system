@@ -118,6 +118,11 @@ PHP School management system developed for schools or small institutes. You can 
    <b> visit on the url : <i>http://localhost/school-management-system</i> </b>
    <br> Visit to the given URL to see the running website
 
+## Important Message 
+<b>Cut and paste the two file that are named as shown below in the root directory (xampp/htdocs) before running the application </b> <br>
+   <b> .htaccess </b>
+   <br> page-not-found.html
+
 ## 🔐 Emails and Passwords
 
 The project comes with default user on each panel you can remove and update them also.<br>
