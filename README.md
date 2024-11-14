@@ -120,6 +120,7 @@ PHP School management system developed for schools or small institutes. You can 
 
 ## Important Message 
 Make sure `makecert.bat` & `v3.ext` is under the `xampp\apache` directory. DO NOT PUT THEM INSIDE THE conf folder.
+
 The `conf` folder is supposed to be placed under `xampp\apache\conf` for setting up the HTTPS connection. Ensure this is done correctly to avoid configuration issues.
 To finish the SSL certificate setup, please run the following steps:
 1. Go to `xampp\apache\conf\ssl.crt` and run `server.crt`.
