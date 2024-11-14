@@ -119,7 +119,13 @@ PHP School management system developed for schools or small institutes. You can 
    <br> Visit to the given URL to see the running website
 
 ## Important Message 
-The `conf` folder is supposed to be placed under `xampp/apache/conf` for setting up the HTTPS connection. Ensure this is done correctly to avoid configuration issues.
+Make sure `makecert.bat` & `v3.ext` is under the `xampp\apache` directory. DO NOT PUT THEM INSIDE THE conf folder.
+The `conf` folder is supposed to be placed under `xampp\apache\conf` for setting up the HTTPS connection. Ensure this is done correctly to avoid configuration issues.
+To finish the SSL certificate setup, please run the following steps:
+1. Go to `xampp\apache\conf\ssl.crt` and run `server.crt`.
+2. Click `Install Certificate` and select `Local Machine`.
+3. Choose `Place all certificates in the following store`. Then click `Browse` & select `Trusted Root Certification Authorities`. Click Ok, Next and Finish.
+4. Restart XAMPP's Apache server and retry. If it doesn't work, then try restarting your machine.
 
 <b>Cut and paste </b> the two file that are named as shown below in the root directory (C:\xampp\htdocs) before running the application </b> <br>
    <br> 1. .htaccess </br>
