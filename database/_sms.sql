@@ -592,7 +592,7 @@ CREATE TABLE `users` (
   `s_no` int(15) NOT NULL,
   `id` varchar(40) NOT NULL,
   `email` varchar(256) NOT NULL,
-  `password_hash` varchar(700) NOT NULL,
+  `password_hash` varchar(1100) NOT NULL,
   `role` varchar(20) NOT NULL,
   `theme` varchar(20) NOT NULL DEFAULT 'light'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
