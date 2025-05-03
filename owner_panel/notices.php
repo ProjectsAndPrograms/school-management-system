@@ -18,6 +18,8 @@ error_reporting(0);
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <title>ERP</title>
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <script src="../js/oranbyte-google-translator.js"></script>
     <style type="text/css">
   .text-muted{
     margin-left: 2%;
@@ -143,7 +145,12 @@ error_reporting(0);
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex align-items-center">
+            <div id="oranbyte-google-translator" class="me-2"
+              data-default-lang="en"
+              data-lang-root-style="code-flag"
+              data-lang-list-style="code-flag"
+              ></div>
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>

@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <title>ERP</title>
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <script src="../js/oranbyte-google-translator.js"></script>
     <style type="text/css">
          .card{
                 
@@ -88,7 +90,12 @@
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex align-items-center">
+            <div id="oranbyte-google-translator" class="me-2"
+              data-default-lang="en"
+              data-lang-root-style="code-flag"
+              data-lang-list-style="code-flag"
+              ></div>
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
