@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
 
     <style type="text/css">
         .container main .subjects .eg #piechart {
@@ -35,12 +35,14 @@
                 height: 200px;
                 padding-left: 0%;
                 padding-right: 0%;
-                
+
             }
-            .container main .subjects{
+
+            .container main .subjects {
                 margin-left: 4%;
             }
-            .leaves{
+
+            .leaves {
                 width: 106%;
                 /*margin-left: 5%;*/
                 font-size: 10px;
@@ -121,6 +123,17 @@
                 margin: 0%;
             }
         }
+
+        .link-btn {
+            display: block;
+            border: 1px solid rgb(214 183 255);
+            background-color: rgb(212 196 255 / 77%);
+            color: #000000;
+            padding: 8px 10px;
+            border-radius: 5px;
+            max-width: 100px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -131,7 +144,7 @@
             <h2>E<span class="danger">R</span>P</h2>
         </div>
         <div class="navbar">
-        <a href="index.php">
+            <a href="index.php">
                 <span class="material-icons-sharp">home</span>
                 <h3>Home</h3>
             </a>
@@ -197,6 +210,12 @@
 
                     </div>
                 </div>
+                <br>
+                <div id="oranbyte-google-translator" 
+                        data-default-lang="en"
+                        data-lang-root-style="code-flag"
+                        data-lang-list-style="code-flag"
+                        ></div>
                 <div class="about">
                     <?php
                     $query = "select * from students where id='$id'";
@@ -217,9 +236,13 @@
                     }
 
                     ?><br>
-                    <b><a href="buspanel.php">Bus Panel</a></b><br><br>
-                     <br>
-                    <b><a href="fee-payment.php">Pay-Fee</a></b>
+
+                    <div style="display: inline;">
+                  
+                    <b><a href="buspanel.php" class="link-btn">Bus Panel</a></b><br>
+                    <b><a href="fee-payment.php" class="link-btn">Pay-Fee</a></b>
+                    
+                    </div>
                 </div>
             </div>
         </aside>
@@ -288,24 +311,24 @@
                 <div class="updates">
                     <div class="message">
                         <?php
-$id = $_SESSION['uid'];
-$query_sql2 = "SELECT * FROM students WHERE id='$id'";
-$result = mysqli_query($conn, $query_sql2);
-$row = $result->fetch_assoc();
-$class = $row['class'];
+                        $id = $_SESSION['uid'];
+                        $query_sql2 = "SELECT * FROM students WHERE id='$id'";
+                        $result = mysqli_query($conn, $query_sql2);
+                        $row = $result->fetch_assoc();
+                        $class = $row['class'];
 
-$sql_query = "SELECT * FROM notice WHERE (role = 'student' AND class='$class') OR (role = 'all' OR role='') ORDER BY s_no DESC LIMIT 3";
-$result = mysqli_query($conn, $sql_query);
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo "<p> <b>" . $row['title'] . "</b> <br>" . $row['body'] . "<br></p>";
-        if ($row['file'] != null) {
-            echo "<a href='../noticeUploads/" . $row['file'] . "'><img src='file.svg' height='30px' width='30px'><p style='color:red;'>View Notice</p></a>";
-        }
-        echo "<small class='text-muted'><b>" . $row['timestamp'] . "</b></small><hr><br>";
-    }
-}
-?>
+                        $sql_query = "SELECT * FROM notice WHERE (role = 'student' AND class='$class') OR (role = 'all' OR role='') ORDER BY s_no DESC LIMIT 3";
+                        $result = mysqli_query($conn, $sql_query);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<p> <b>" . $row['title'] . "</b> <br>" . $row['body'] . "<br></p>";
+                                if ($row['file'] != null) {
+                                    echo "<a href='../noticeUploads/" . $row['file'] . "'><img src='file.svg' height='30px' width='30px'><p style='color:red;'>View Notice</p></a>";
+                                }
+                                echo "<small class='text-muted'><b>" . $row['timestamp'] . "</b></small><hr><br>";
+                            }
+                        }
+                        ?>
 
 
 
@@ -327,7 +350,7 @@ if ($result->num_rows > 0) {
                         $formattedDate = date('d M, Y', strtotime($timestamp));
 
                         $senderId = $row2['sender_id'];
-                        $tableName = ($senderId >= 1000) ? 'admins' : 'teachers'; 
+                        $tableName = ($senderId >= 1000) ? 'admins' : 'teachers';
                         $sql = "SELECT `fname`, `lname` FROM `$tableName` WHERE id = '$senderId' LIMIT 1";
 
                         $result = mysqli_query($conn, $sql);
@@ -350,7 +373,7 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>";
                     }
-                }else{
+                } else {
                     echo "<div class='teacher'>
                     <div class='info' style='width: 100%;'>
                         <p class='text-muted para-text'>
@@ -426,6 +449,7 @@ if ($result->num_rows > 0) {
     <script type="text/javascript" src="app.js"></script>
     <!-- <script type="text/javascript" src="timeTable.js"></script> -->
     <script type="text/javascript" src="index.js"></script>
+    <script src="../js/oranbyte-google-translator.js"></script>
 </body>
 
 </html>

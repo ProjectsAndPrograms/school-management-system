@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="./images/logo.png">
     <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <title>Fee Payment</title>
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <script src="../js/oranbyte-google-translator.js"></script>
     <style type="text/css">
       .payment{
         margin-bottom: 10%;

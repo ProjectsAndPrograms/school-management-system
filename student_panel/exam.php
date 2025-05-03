@@ -21,6 +21,8 @@ $id = $_SESSION['uid'];
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     </script>
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <script src="../js/oranbyte-google-translator.js"></script>
 
     <style>
         body {

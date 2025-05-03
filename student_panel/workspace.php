@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="shortcut icon" href="./images/logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <script src="../js/oranbyte-google-translator.js"></script>
 
     <style>
         body{overflow: hidden;}

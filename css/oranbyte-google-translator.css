@@ -484,7 +484,7 @@ iframe.skiptranslate {
     right: 60%;
 }
 .oranbyte-translator .dropdown-content.lang-code-flag {
-    min-width: 50px;
+    min-width: 70px;
 }
 .oranbyte-translator .dropdown-content.lang-code-flag::before {
     right: 60%;
