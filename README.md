@@ -25,6 +25,7 @@ PHP School management system developed for schools or small institutes. You can 
   12. Front Page 
   13. Single login
   14. Dark theme support
+  15. Multi-Language Support <small style="color: orange;">(new)</small>
 
 ## 🦤 SCREENSHOTS
 
