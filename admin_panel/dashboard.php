@@ -81,7 +81,7 @@
                 <i class='bx bx-book'></i>
                 <span class="info">
                     <h3 class="text-center"  id="classCount">_ _ _</h3>
-                    <p>Home work and Notes</p>
+                    <p>Notes</p>
                 </span>
             </li>
             <li onclick="showNoticeList()">

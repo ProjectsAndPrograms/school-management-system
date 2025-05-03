@@ -122,10 +122,10 @@ function addReminder() {
     }
 }
 
+var refresh = 'true';
 function showReminders() {
 
     var reminderList = document.getElementById("all-reminders");
-    var reminderString = "";
     if (reminderList != null) {
 
         fetch('../assets/fetchReminders.php', {
@@ -133,21 +133,34 @@ function showReminders() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            //   body: JSON.stringify(postData),
+            body: JSON.stringify({ refresh: refresh })
         })
-            .then(response => response.json())
-            .then(data => {
-
-                for (var i = 0; i < data.length; i++) {
-                    reminderString = reminderString + data[i];
-                }
-
-                reminderList.innerHTML = reminderString;
-
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        .then(response => {
+            if (response.status === 204) {
+                return null;
+            }
+           
+            if (!response.ok) {
+                throw new Error('Server error: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!data) return;
+    
+            refresh = 'false';
+            let reminderString = '';
+    
+            for (let i = 0; i < data.length; i++) {
+                reminderString += data[i];
+            }
+    
+            reminderList.innerHTML = reminderString;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+        
     }
 
 }

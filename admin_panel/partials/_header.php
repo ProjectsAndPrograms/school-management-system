@@ -12,12 +12,8 @@
 
     <title>School Management</title>
     <link rel="icon" type="image/x-icon" href="../images/1.png">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
-
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-   
     
+    <link rel="stylesheet" href="css/bootstrap.css">
 
     <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -32,7 +28,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/date-picker.css" />
-    <link rel="stylesheet" href="css/date-picker.css">
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <link rel="stylesheet" href="settings-style.css">
    
 </head>
 <?php 
