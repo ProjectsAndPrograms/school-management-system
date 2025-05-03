@@ -531,6 +531,7 @@ iframe.skiptranslate {
 /* BEGIN - DARK MODE */
 
 .dark .oranbyte-translator .dropbtn,
+.dark-theme .oranbyte-translator .dropbtn,
 [data-theme="dark"] .oranbyte-translator .dropbtn
 {
     background-color: #373d4b;
@@ -538,23 +539,27 @@ iframe.skiptranslate {
     outline-color: #ffffff5c;
 }
 .dark .oranbyte-translator .dropdown-content ul,
+.dark-theme .oranbyte-translator .dropdown-content ul,
 [data-theme="dark"]  .oranbyte-translator .dropdown-content ul
 {
     border-radius: 10px !important;
 }
 .dark .oranbyte-translator .dropdown-content li,
+.dark-theme .oranbyte-translator .dropdown-content li,
 [data-theme="dark"]  .oranbyte-translator .dropdown-content li
 {
     background-color: #373d4b;
     color: white;
 }
 .dark .oranbyte-translator .dropdown-content li:hover,
+.dark-theme .oranbyte-translator .dropdown-content li:hover,
 [data-theme="dark"]  .oranbyte-translator .dropdown-content li:hover
 {
     background-color: #373d4bd6;
     color: white;
 }
 .dark .oranbyte-translator .dropdown-content::before,
+.dark-theme .oranbyte-translator .dropdown-content::before,
 [data-theme="dark"] .oranbyte-translator .dropdown-content::before
 {
     border-bottom: 7px solid #373d4b;
