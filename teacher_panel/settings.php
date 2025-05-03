@@ -1,41 +1,4 @@
-
-
-
-<?php include("../assets/noSessionRedirect.php"); ?>
-<?php include("./verifyRoleRedirect.php"); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="images/1.png">
-    <title>School Management</title>
-
-
-    <link rel="icon" type="image/x-icon" href="../images/1.png">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
-    
-    
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-
-    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="settings-style.css">
-
-</head>
-
-<body>
+<?php include('partials/_header.php') ?>
 
 <div class="modal fade" id="edit-confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -250,10 +213,11 @@
                 <div class="left">
                     <h1>Settings</h1>
                     <ul class="breadcrumb">
-                        <li><a href="#">
-
-                            </a></li>
-
+                        <li>
+                            <a href="#">
+                                Update Or Manage Your Profile
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

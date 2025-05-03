@@ -214,10 +214,11 @@
                 <div class="left">
                     <h1>Settings</h1>
                     <ul class="breadcrumb">
-                        <li><a href="#">
-
-                            </a></li>
-
+                        <li>
+                            <a href="#">
+                                Update Or Manage Your Profile
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

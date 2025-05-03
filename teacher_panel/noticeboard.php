@@ -199,7 +199,7 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active " id="createNoticeTab" data-bs-toggle="tab" data-bs-target="#home"
+                        <button class="nav-link active me-1" id="createNoticeTab" data-bs-toggle="tab" data-bs-target="#home"
                             type="button" role="tab" aria-controls="home" aria-selected="true">Create
                             Notice</button>
                     </li>

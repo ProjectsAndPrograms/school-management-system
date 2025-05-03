@@ -9,7 +9,7 @@
 
 
   <div id="oranbyte-google-translator" 
-        data-default-lang="hi"
+        data-default-lang="en"
         data-lang-root-style="code-flag"
         data-lang-list-style="code-flag"
         ></div>

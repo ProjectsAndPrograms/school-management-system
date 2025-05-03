@@ -18,12 +18,12 @@
         <div class="header">
             <div class="left">
                 <h1>Attendence</h1>
-                <ul class="breadcrumb">
+                <!-- <ul class="breadcrumb">
                     <li><a href="#">
 
                         </a></li>
 
-                </ul>
+                </ul> -->
             </div>
 
         </div>
@@ -34,7 +34,7 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active " id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        <button class="nav-link active me-1" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
                             type="button" role="tab" aria-controls="home" aria-selected="true">Take
                             Attendence</button>
                     </li>

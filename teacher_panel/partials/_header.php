@@ -28,6 +28,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
+    <link rel="stylesheet" href="settings-style.css">
     
    
 </head>

@@ -1,29 +1,4 @@
-
-<?php include("../assets/noSessionRedirect.php"); ?>
-<?php include("./verifyRoleRedirect.php"); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/x-icon" href="../images/1.png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <title>School Management</title>
-    <link rel="icon" type="image/x-icon" href="images/1.png">
-
-   
-
-
-</head>
-
-<body>
+<?php include('partials/_header.php') ?>
 
     <div class='toast-container position-fixed text-success bottom-0 end-0 p-3'>
         <div id='liveToast' class='toast' role='alert' aria-live='assertive' aria-atomic='true' style="color:black;">
