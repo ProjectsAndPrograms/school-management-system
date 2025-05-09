@@ -5,7 +5,7 @@
         <img src="./images/company-logo.jpg" alt="Logo" />
       </a>
       <a href="./index.php">
-        <h3>SCHOOL MANAGEMENT</h3>
+        <h3>KelaSYS</h3>
       </a>
     </div>
 
@@ -13,9 +13,9 @@
 
       <div class="links">
         <ul>
-          <li><a href="./index.php">Home</a></li>
-          <li><a href="./about-us.php">About-us</a></li>
-          <li><a href="./login.php" class="btn">Login</a></li>
+          <li><a href="./index.php">Accueil</a></li>
+          <li><a href="./about-us.php">A Propos</a></li>
+          <li><a href="./login.php" class="btn">Connexion</a></li>
         </ul>
 
 
