@@ -51,7 +51,7 @@ document.getElementById('confirmpassword').addEventListener('keyup', ()=>{
     notMatch.style.display = 'none';
 });
 
-
+// Check data policy code is updated. (CL)
 function submitForm(event) {
     event.preventDefault();
 
@@ -61,7 +61,7 @@ function submitForm(event) {
         method: 'POST',
         body: formData
     })
-    .then(response =>{
+    .then(response => {
         if (!response.ok) {
             if (response.status === 500) {                
                 window.location.href = './errors/internal_server_error.html';
@@ -71,25 +71,33 @@ function submitForm(event) {
         return response.json();
     })
     .then(data => {
-        if(data.status === 'NO_CONNECTION'){
+        if (data.status === 'NO_CONNECTION') {
             window.location.href = '../errors/error.html';
             return;
         }
-    
+
         error_msg.classList.remove('alert-danger', 'alert-success');
         error_msg.classList.add(data.status === "success" ? 'alert-success' : 'alert-danger');
-        error_msg.innerHTML = data.status === "success" ? 'success' : '' + data.message;
-    
+        error_msg.innerHTML = data.status === "success" ? 'success' : data.message;
         errorbox.style.display = 'block';
-    
-        if (data.role === "admin") {
-            window.location.href = 'admin_panel/dashboard.php';
-        } else if (data.role === "owner") {
-            window.location.href = 'owner_panel/index.php';
-        } else if (data.role === "teacher") {
-            window.location.href = 'teacher_panel/dashboard.php';
-        } else if (data.role === "student") {
-            window.location.href = 'student_panel/index.php';
+
+        // Check for a specific redirect page if provided in the response
+        if (data.status === 'redirect' && data.page) {
+            window.location.href = data.page;
+            return;
+        }
+
+        // Redirect based on user role if login is successful
+        if (data.status === 'success') {
+            if (data.role === "admin") {
+                window.location.href = 'admin_panel/dashboard.php';
+            } else if (data.role === "owner") {
+                window.location.href = 'owner_panel/index.php';
+            } else if (data.role === "teacher") {
+                window.location.href = 'teacher_panel/dashboard.php';
+            } else if (data.role === "student") {
+                window.location.href = 'student_panel/index.php';
+            }
         }
     
     })
@@ -97,11 +105,11 @@ function submitForm(event) {
         console.error('Error:', error);
         error_msg.classList.remove('alert-success');
         error_msg.classList.add('alert-danger');
-        error_msg.innerHTML = '<strong>Error</strong> ' + error.message;
+        error_msg.innerHTML = '<strong>Error:</strong> ' + error.message;
         errorbox.style.display = 'block';
     });
-    
 }
+
 
 
 document.getElementById('forgotpassword').addEventListener('click', function(){
