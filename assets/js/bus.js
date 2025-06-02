@@ -33,6 +33,9 @@ document.getElementById("select-bus-for-root").addEventListener('change', showBu
 
     function validateAddBusForm() {
         if (addBusForm.checkValidity()) {
+
+            alert(123);
+
             saveBus(new FormData(addBusForm));
             $("#add-bus-modal").modal("hide");
             cleanForm(addBusForm);
@@ -81,6 +84,7 @@ document.getElementById("select-bus-for-root").addEventListener('change', showBu
         if (editBusForm.checkValidity()) {
             let formData = new FormData(editBusForm)
             formData.append("bus_id", editBusId);
+
             saveBus(formData);
             $("#edit-bus-modal").modal("hide");
             cleanForm(editBusForm);
@@ -114,7 +118,7 @@ document.getElementById("select-bus-for-root").addEventListener('change', showBu
 function saveBus(formData) {
     var toastObject = new bootstrap.Toast(document.getElementById("liveToast"));
     var liveToast = document.getElementById("liveToast");
-
+    
     fetch("../assets/saveBus.php", {
         method: 'POST',
         body: formData,
@@ -354,10 +358,10 @@ function setAvailableStops() {
     let stops = document.querySelectorAll("#bus-root-edit-mode .bus-stop");
 
     for (let i = 0; i < stops.length; i++) {
-        let location = stops[i].querySelector(".bus-location").innerHTML;
+        let location = stops[i].querySelector(".bus-location").innerText.trim();
         let timeActions = stops[i].querySelector(".time-actions");
 
-        let time = timeActions.querySelector('.arrival-time').innerHTML;
+        let time = timeActions.querySelector('.arrival-time').innerText.trim();
 
         rootObjArray[i] = {
             location: location,
@@ -503,11 +507,13 @@ function saveAllBusStops() {
 
     let busID = document.getElementById("select-bus-for-root").value;
 
+    
     let sendBusStopsObj = {
         rootsObjArray: rootObjArray,
         busId: busID,
     }
-
+    
+    
     fetch("../assets/saveAllBusStops.php", {
         method: 'POST',
         headers: {

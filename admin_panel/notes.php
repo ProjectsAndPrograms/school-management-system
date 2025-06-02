@@ -13,7 +13,7 @@
             <form class="needs-validation" id="uploadNotesForm" novalidate>
 
                 <div class="modal-body">
-                    <div class="container my-3">
+                    <div class="container my-3 mb-0">
 
 
                         <div class="row" style="">
@@ -183,7 +183,7 @@
 <!-- edit uploaded notes -->
 <div class="modal modal-md" style="z-index: 2000;" id="edit-uploaded-notes" tabindex="-1"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 
@@ -195,7 +195,7 @@
             <form class="needs-validation" id="editNotesForm" novalidate>
 
                 <div class="modal-body pb-0">
-                    <div class="container my-3">
+                    <div class="container my-3 mb-0">
 
 
                         <div class="row" style="">
@@ -253,14 +253,14 @@
 
                         <div class="mb-3">
                             <label for="file" class="form-label">File</label><br>
-                            <div class="btn btn-primary upload-btn" id="edit_upload_btn">
-                                <label for="upload-file">
+                            
+                             <label for="upload-file" class="btn btn-primary upload-btn" id="edit_upload_btn">
                                     <i class='mt-1 bx bx-cloud-upload' style="cursor:pointer;"></i>
-                                </label>
                                 <input type="file" class="new-upload-file" id="upload-file" name="file"
                                     class="edit-upload-file" accept=".pdf, .png, .doc, .jpg, .jpeg, .zip, .tar, .gz"
                                     style="display: none;width: 100%;">
-                            </div>
+                                </label>
+                           
 
                             <a class="mx-3" id="view-current-file" target="_blank">
                                 <div class="btn btn-primary upload-btn edit-view-btn" id="edit-view-btn">

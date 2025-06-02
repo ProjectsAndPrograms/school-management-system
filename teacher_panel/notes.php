@@ -13,7 +13,7 @@
             <form class="needs-validation" id="uploadNotesForm" novalidate>
 
                 <div class="modal-body">
-                    <div class="container my-3">
+                    <div class="container my-3 mb-0">
 
 
                         <div class="row" style="">
@@ -74,7 +74,7 @@
                             <input class="form-control" type="file" id="formFile" name="file"
                                 accept=".pdf, .png, .doc, .jpg, .jpeg, .zip, .tar, .gz" required>
                             <div id="wrong-comment" class="invalid-feedback file-size-error">
-                            File is too large allowed limit is 200 MB!
+                                File is too large allowed limit is 200 MB!
                             </div>
                         </div>
 
@@ -115,15 +115,15 @@
 
                 <br><br>
                 <div class="progress-box mb-0" style="height: 15px;">
-                            <div class="progress-bar-hider progress-bar-hider1">
-                                <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar progress-pointer progress-bar-striped progress-bar-animated "
-                                        id="progress-pointer">
-                                    </div>
-                                </div>
+                    <div class="progress-bar-hider progress-bar-hider1">
+                        <div class="progress" role="progressbar" aria-label="Animated striped example"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-pointer progress-bar-striped progress-bar-animated "
+                                id="progress-pointer">
                             </div>
                         </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -183,15 +183,15 @@
 <!-- edit uploaded notes -->
 <div class="modal modal-md" style="z-index: 2000;" id="edit-uploaded-notes" tabindex="-1"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                
+
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Edit uploaded notes</h1>
                 <button type="button" class="close mr-2" data-bs-dismiss="modal" aria-label="Close"><i
                         class='bx bx-x'></i></button>
             </div>
-            
+
             <form class="needs-validation" id="editNotesForm" novalidate>
 
                 <div class="modal-body pb-0">
@@ -253,14 +253,14 @@
 
                         <div class="mb-3">
                             <label for="file" class="form-label">File</label><br>
-                            <div class="btn btn-primary upload-btn" id="edit_upload_btn">
-                                <label for="upload-file">
-                                    <i class='mt-1 bx bx-cloud-upload' style="cursor:pointer;"></i>
-                                </label>
+
+                            <label for="upload-file" class="btn btn-primary upload-btn" id="edit_upload_btn">
+                                <i class='mt-1 bx bx-cloud-upload' style="cursor:pointer;"></i>
                                 <input type="file" class="new-upload-file" id="upload-file" name="file"
                                     class="edit-upload-file" accept=".pdf, .png, .doc, .jpg, .jpeg, .zip, .tar, .gz"
                                     style="display: none;width: 100%;">
-                            </div>
+                            </label>
+
 
                             <a class="mx-3" id="view-current-file" target="_blank">
                                 <div class="btn btn-primary upload-btn edit-view-btn" id="edit-view-btn">
@@ -278,13 +278,13 @@
                         <div class="mt-3" style="display: flex; flex-direction: row-reverse;">
                             <small class="last-editor mb-0"></small>
                         </div>
-                     
+
 
                     </div>
                 </div>
                 <div class="modal-footer pt-0">
 
-              
+
                     <button type="button" class="btn btn-primary" id="editNote">
                         <div><i class='bx bxs-cloud-upload'></i>&nbsp;&nbsp;<span> Edit</span></div>
                     </button>
@@ -367,7 +367,7 @@
                             <br>
                             <div class="container">
                                 <a class="find" id="find-notes-btn">
-                                <i class='bx bx-search-alt'></i>
+                                    <i class='bx bx-search-alt'></i>
                                     <span>Find</span>
                                 </a>
                             </div>

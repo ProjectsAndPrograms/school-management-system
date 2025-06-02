@@ -32,7 +32,7 @@
     <!-- edit profile model -->
     <div class="modal" style="z-index: 2000;" id="edit-profile-model" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Profile</h1>

@@ -1,8 +1,10 @@
 <?php
 session_start();
 include('config.php');
-$response = array();
-if (isset($_SESSION['uid']) && $_SERVER["REQUEST_METHOD"] == "POST") {
+
+$response = [];
+
+if (isset($_SESSION['uid']) && $_SERVER["REQUEST_METHOD"] === "POST") {
 
     $busID = filter_var($_POST['busId'], FILTER_SANITIZE_SPECIAL_CHARS);
 
@@ -12,82 +14,95 @@ if (isset($_SESSION['uid']) && $_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 
-    if (mysqli_num_rows($result) > 0) {
+    if ($result && mysqli_num_rows($result) > 0) {
+        $busStops = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $totalStops = count($busStops);
 
         $response['status'] = "success";
         $response['view-root'] = "";
         $response['edit-root'] = '<div class="bus-connect first">
-        <div class="add-new-stop-container">
-            <div class="add-new-stop" onclick="openAddBusStopDialog(0)"><i class="bx bx-plus"></i></div>
-        </div>
-    </div>';
+            <div class="add-new-stop-container">
+                <div class="add-new-stop" onclick="openAddBusStopDialog(0)"><i class="bx bx-plus"></i></div>
+            </div>
+        </div>';
 
-        $rowCount = 0;
         $left = true;
-        while ($row = mysqli_fetch_assoc($result)) {
-            $rowCount++;
 
-            if ($rowCount == mysqli_num_rows($result)) {
+        foreach ($busStops as $index => $row) {
+            $isLast = ($index === $totalStops - 1);
+            $location = ucfirst(strtolower($row['location']));
+            $arrival = strtoupper($row['arrival_time']);
 
-                $response['view-root'] .= ' <div class="bus-stop school">
-                <div class="bus-stand">
-                    <div class="inner-circle"> <i class="bx bx-book"></i> </div>
-                </div>
-                <div class="bus-details bottom">
-                    <div class="text-break ">' . ucfirst($row['location']) . '</div>
-                    <small>' . strtoupper($row['arrival_time']) . '</small>
-                </div>
-            </div>';
-
-                $response['edit-root'] .= '<div class="bus-stop school">
+            if ($isLast) {
+                // View mode
+                $response['view-root'] .= '
+                <div class="bus-stop school">
                     <div class="bus-stand">
-                        <div class="inner-circle"> <i class="bx bx-book"></i> </div>
+                        <div class="inner-circle"><i class="bx bx-book"></i></div>
                     </div>
                     <div class="bus-details bottom">
-                        <div class="text-break bus-location">' . ucfirst($row['location']) . '</div>
+                        <div class="text-break">' . htmlspecialchars($location) . '</div>
+                        <small>' . htmlspecialchars($arrival) . '</small>
+                    </div>
+                </div>';
+
+                // Edit mode
+                $response['edit-root'] .= '
+                <div class="bus-stop school">
+                    <div class="bus-stand">
+                        <div class="inner-circle"><i class="bx bx-book"></i></div>
+                    </div>
+                    <div class="bus-details bottom">
+                        <div class="text-break bus-location">' . htmlspecialchars($location) . '</div>
                         <small class="time-actions">
-                        <span class="arrival-time">' . strtoupper($row['arrival_time']) . '</span>
-                            <span class="cursor-pointer edit-span-btn mx-1"  onclick="openEditBusStopDialog('. $rowCount .' , `'. $row['serial'] .'`)"><i class="bx bxs-edit text-success fs-5"></i></span>
+                            <span class="arrival-time">' . htmlspecialchars($arrival) . '</span>
+                            <span class="cursor-pointer edit-span-btn mx-1" onclick="openEditBusStopDialog(' . ($index + 1) . ', `' . $row['serial'] . '`)">
+                                <i class="bx bxs-edit text-success fs-5"></i>
+                            </span>
                         </small>
                     </div>
                 </div>';
             } else {
-
-                $busStop = '<div class="bus-stop">
-                <div class="bus-stand">
-                    <div class="inner-circle"></div>
+                // View mode
+                $response['view-root'] .= '
+                <div class="bus-stop">
+                    <div class="bus-stand">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="bus-details ' . ($left ? 'left' : 'right') . '">
+                        <div class="text-break">' . htmlspecialchars($location) . '</div>
+                        <small>' . htmlspecialchars($arrival) . '</small>
+                    </div>
                 </div>
-                <div class="bus-details ' . ($left == true ? "left" : "right") . '">
-                    <div class="text-break">' . ucfirst(strtolower($row['location'])) . '</div>
-                    <small>' . strtoupper($row['arrival_time']) . '</small>
-                </div>
-            </div>';
-                $toNextStopRoot = '<div class="bus-connect"></div>';
+                <div class="bus-connect"></div>';
 
-                $editBusStop = ' <div class="bus-stop">
-                <div class="bus-stand">
-                    <div class="inner-circle"></div>
+                // Edit mode
+                $response['edit-root'] .= '
+                <div class="bus-stop">
+                    <div class="bus-stand">
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="bus-details ' . ($left ? 'left' : 'right') . '">
+                        <div class="text-break bus-location">' . htmlspecialchars($location) . '</div>
+                        <small class="time-actions">
+                            <span class="arrival-time">' . htmlspecialchars($arrival) . '</span>
+                            <span class="cursor-pointer edit-span-btn mx-1" onclick="openEditBusStopDialog(' . ($index + 1) . ', `' . $row['serial'] . '`)">
+                                <i class="bx bxs-edit text-success fs-5"></i>
+                            </span>
+                            <span class="cursor-pointer delete-span-btn" onclick="showDeleteBusStopConfirmationDialog(`' . $row['s_no'] . '`)">
+                                <i class="bx bxs-trash-alt text-danger fs-5"></i>
+                            </span>
+                        </small>
+                    </div>
                 </div>
-                <div class="bus-details ' . ($left == true ? "left" : "right") . '"">
-                    <div class="text-break bus-location">' . ucfirst(strtolower($row['location'])) . '</div>
-                    <small class="time-actions">
-                    <span class="arrival-time">' . strtoupper($row['arrival_time']) . '</span>
-                        <span class="cursor-pointer edit-span-btn mx-1" onclick="openEditBusStopDialog('.$rowCount.', `'. $row['serial'] .'`)"><i class="bx bxs-edit text-success fs-5"></i></span>
-                        <span class="cursor-pointer delete-span-btn" onclick="showDeleteBusStopConfirmationDialog(`'. $row['s_no'] .'`)"><i class="bx bxs-trash-alt text-danger fs-5"></i></span>
-                    </small>
-                </div>
-            </div>';
-
-            $editToNextBusStopRoot = ' <div class="bus-connect">
-            <div class="add-new-stop-container">
-                <div class="add-new-stop" onclick="openAddBusStopDialog('. $rowCount .')"><i class="bx bx-plus"></i></div>
-            </div>
-        </div>';
-
-                $response['view-root'] .= $busStop . $toNextStopRoot;
-                $response['edit-root'] .= $editBusStop . $editToNextBusStopRoot;
-                $left = !$left;
+                <div class="bus-connect">
+                    <div class="add-new-stop-container">
+                        <div class="add-new-stop" onclick="openAddBusStopDialog(' . ($index + 1) . ')"><i class="bx bx-plus"></i></div>
+                    </div>
+                </div>';
             }
+
+            $left = !$left;
         }
     } else {
         $response['status'] = "ERROR";
@@ -99,4 +114,6 @@ if (isset($_SESSION['uid']) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $response['status'] = 'ERROR';
     $response['message'] = 'Invalid Request!';
 }
+
+header('Content-Type: application/json');
 echo json_encode($response);

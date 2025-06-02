@@ -30,7 +30,15 @@ if (isset($_POST["noteId"])) {
                 $response = "Unable to delete file!";
             }
         } else {
-            $response = "File not found!";
+            $query = "DELETE FROM `notes` WHERE `s_no` = ?";
+            $stmt = mysqli_prepare($conn, $query);
+            mysqli_stmt_bind_param($stmt, "i", $noteId);
+
+            if (mysqli_stmt_execute($stmt)) {
+                $response = "success";
+            } else {
+                $response = "Unable to delete Note! " . mysqli_error($conn);
+            }
         }
     } else {
         $response = "Note not found!";

@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', function () {
         .then(response => response.text())
         .then(data => {
 
-            theme = data;
+            theme = data.trim();
 
             if (theme == 'dark') {
                 document.getElementById("theme-toggle").checked = true;

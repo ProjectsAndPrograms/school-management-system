@@ -392,28 +392,19 @@ function showEditDialog(editMsgId){
 
       document.querySelector(".editTitle").value = data['title'];
       document.querySelector(".edited-comment").value = data['comment'];
+
+      const selectClassOption = document.getElementById("editClassOption");
+
       document.getElementById("editClassOption").value = data['class'];
 
-      // fetching subjects realted to class
-      fetch("../assets/fetchSubjectOptions.php", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: "class=" + encodeURIComponent(data['class'] + ""),
-      })
-        .then(response => response.text())
-        .then(data1 => {
-          
-          document.getElementById('editSubjectList').innerHTML = ' <option selected disabled value="">--select--</option>' + data1;
+      selectClassOption.addEventListener("change", function () {
+        var _class = this.value;
+        fetchSubjectOptionsForEdit(_class);
+      });
 
-          document.getElementById("editSubjectList").value = data['subject'];
-    
-    
-        })
-        .catch(error => {
-          console.error("Error" + error);
-        })
+      // fetching subjects realted to class
+      fetchSubjectOptionsForEdit(data['class']);
+
 
         document.getElementById("view-current-file").href = data['file'];
         document.querySelector(".last-editor").innerHTML = "Last Edited By " + data['editor'];
@@ -427,6 +418,28 @@ function showEditDialog(editMsgId){
         console.error("Error" + error);
     })
 
+}
+
+function fetchSubjectOptionsForEdit(_class) {
+  fetch("../assets/fetchSubjectOptions.php", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: "class=" + encodeURIComponent(_class + ""),
+      })
+        .then(response => response.text())
+        .then(data1 => {
+          
+          document.getElementById('editSubjectList').innerHTML = ' <option selected disabled value="">--select--</option>' + data1;
+
+          document.getElementById("editSubjectList").value = data['subject'];
+    
+    
+        })
+        .catch(error => {
+          console.error("Error" + error);
+        })
 }
 
 

@@ -24,9 +24,9 @@
 
  <div class="tab-content" id="pills-tabContent">
 
-     <div class="tab-pane fade  show active" id="view-root" role="tabpanel" aria-labelledby="view-root-tab" tabindex="0">
+     <div class="tab-pane fade show active" id="view-root" role="tabpanel" aria-labelledby="view-root-tab" tabindex="0">
 
-         <div class="bus-root-gui" id="bus-root-view-mode">
+         <div class="bus-root-gui" style="display: flex;" id="bus-root-view-mode">
 
          </div>
 

@@ -44,7 +44,7 @@ function loadTimeTable() {
     })
         .then(response => response.json())
         .then(data => {
-
+            console.log(data);
             document.getElementById("findTimeTableBtn").disabled = false;
             document.getElementById('timeTableClassSection').innerHTML = "Class " + _class + " " + _section;
             document.getElementById("__day__").innerHTML = days[dayOfWeak - 1];

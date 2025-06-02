@@ -1559,7 +1559,13 @@ div._flex-container button {
 
 .content main .bottom-data .orders table td {
     padding: 16px 0;
+    
 }
+.content main .bottom-data .orders table td input:enabled{
+    border: 1px dashed #2a4364a3;
+    background: var(--light);
+}
+
 
 .content main .bottom-data .orders table td.marks-input-container {
     padding: 16px 2px;
@@ -1572,8 +1578,12 @@ div._flex-container button {
     padding-left: 6px;
 
 }
-
-
+.bus-root-gui.skiptranslate{
+    display: block;
+}
+#create-subject-form select{
+    width: 100% !important;
+}
 
 .content main .bottom-data .orders table td img {
     width: 36px;

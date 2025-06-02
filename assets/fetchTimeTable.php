@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $editorId = $row['editor_id'];
                 if ($dayOfWeak < 7) {
 
-                    if($flag < 5){
+                    if($flag < 4){
                         $response['table1Message'] .= '  <tr class="tableRow">
                    
                         <td class="tableData"> <input class="form-control tableInput srartTime_" type="text" value="' . $row['start_time'] . '" disabled></td>

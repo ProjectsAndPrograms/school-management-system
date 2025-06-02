@@ -36,7 +36,7 @@
 
 
         var data = this.responseText;
-        if (data === "success") {
+        if (data.trim() === "success") {
           $("#upload-syllabus").modal("hide");
           liveToast.style.backgroundColor = "#BBF7D0";
           liveToast.style.color = 'green';
@@ -246,7 +246,7 @@ function openEditSllyabusFile(sllyabusIdNumber) {
       if (this.readyState == 4 && this.status == 200) {
 
         var data = this.responseText;
-        if (data === "success") {
+        if (data.trim() === "success") {
           $("#upload-syllabus-onlyFile").modal('hide');
           liveToast.style.backgroundColor = "#BBF7D0";
           liveToast.style.color = 'green';

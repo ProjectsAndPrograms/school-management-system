@@ -67,13 +67,12 @@
 
                             <div class="mb-3">
                                 <label for="file" class="form-label">Any file</label><br>
-                                <div class="btn btn-primary upload-btn">
-                                    <label for="upload-file">
-                                        <i class='mt-1 bx bx-cloud-upload' style="cursor:pointer;"></i>
-                                    </label>
+
+                                <label for="upload-file" class="btn btn-primary upload-btn">
+                                    <i class='mt-1 bx bx-cloud-upload' style="cursor:pointer;"></i>
                                     <input type="file" id="upload-file" class="edit-upload-file"
                                         style="display: none;width: 100%;">
-                                </div>
+                                </label>
 
                                 <a class="mx-3" id="view-current-file" target="_blank">
                                     <div class="btn btn-primary upload-btn edit-view-btn" id="edit-view-btn">
@@ -224,73 +223,73 @@
                                         <i class='bx bx-receipt'></i>
                                         <h3>Create Notice </h3>
                                         <i class='bx bx-filter'></i>
-                                        
+
                                     </div>
                                     <hr><br>
                                     <!-- create notice -->
 
                                     <div class="center-element">
-                                    <div class="noticeform">
-                                        <div class="mb-3">
-                                            <label for="title" class="form-label">Notice
-                                                Title</label>
-                                            <input type="text" class="form-control" id="notice-title" name="title"
-                                                placeholder="title of notice" required>
-                                            <div class="invalid-feedback" id="invalid-title">
-                                                You must have to add Title!
+                                        <div class="noticeform">
+                                            <div class="mb-3">
+                                                <label for="title" class="form-label">Notice
+                                                    Title</label>
+                                                <input type="text" class="form-control" id="notice-title" name="title"
+                                                    placeholder="title of notice" required>
+                                                <div class="invalid-feedback" id="invalid-title">
+                                                    You must have to add Title!
+                                                </div>
                                             </div>
-                                        </div>
-                                        <br>
+                                            <br>
 
-                                        <div class="mb-3">
-                                            <label for="body" class="form-label">Notice
-                                                Body</label>
-                                            <textarea class="form-control" id="notice-body" name="body"
-                                                rows="4"></textarea>
-                                            <div class="invalid-feedback" id="invalid-body">
-                                                Either Notice Body or Any file is required!
-                                            </div>
-                                        </div>
-
-                                        <br>
-                                        <div class="mb-3">
-                                            <label for="file" class="form-label">Any file</label>
-                                            <input type="file" class="form-control" accept="*" id="notice-file"
-                                                name="file">
-                                            <p id="errorDisplay"></p>
-                                            <div class="invalid-feedback" id="invalid-file">
-                                                File is too large allowed limit is 200 MB!
+                                            <div class="mb-3">
+                                                <label for="body" class="form-label">Notice
+                                                    Body</label>
+                                                <textarea class="form-control" id="notice-body" name="body"
+                                                    rows="4"></textarea>
+                                                <div class="invalid-feedback" id="invalid-body">
+                                                    Either Notice Body or Any file is required!
+                                                </div>
                                             </div>
 
-                                        </div>
+                                            <br>
+                                            <div class="mb-3">
+                                                <label for="file" class="form-label">Any file</label>
+                                                <input type="file" class="form-control" accept="*" id="notice-file"
+                                                    name="file">
+                                                <p id="errorDisplay"></p>
+                                                <div class="invalid-feedback" id="invalid-file">
+                                                    File is too large allowed limit is 200 MB!
+                                                </div>
 
-
-                                        <br>
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlTextarea1"
-                                                class="form-label">Importance</label>
-
-                                            <div class="flex-container">
-                                                <label class="importance-disks">
-                                                    <input type="radio" name="disks" value="1" id="check1" checked>
-                                                    <span class="checkmark ch1"></span>
-                                                </label>
-                                                <label class="importance-disks">
-                                                    <input type="radio" name="disks" value="2" id="check2">
-                                                    <span class="checkmark ch2"></span>
-                                                </label>
-                                                <label class="importance-disks">
-                                                    <input type="radio" name="disks" value="3" id="check3">
-                                                    <span class="checkmark ch3"></span>
-                                                </label>
                                             </div>
 
 
-                                        </div>
+                                            <br>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1"
+                                                    class="form-label">Importance</label>
 
+                                                <div class="flex-container">
+                                                    <label class="importance-disks">
+                                                        <input type="radio" name="disks" value="1" id="check1" checked>
+                                                        <span class="checkmark ch1"></span>
+                                                    </label>
+                                                    <label class="importance-disks">
+                                                        <input type="radio" name="disks" value="2" id="check2">
+                                                        <span class="checkmark ch2"></span>
+                                                    </label>
+                                                    <label class="importance-disks">
+                                                        <input type="radio" name="disks" value="3" id="check3">
+                                                        <span class="checkmark ch3"></span>
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    </div>
-                                  
+
 
 
 
@@ -342,7 +341,7 @@
 
                                     </div>
 
-                                 
+
                                     <!-- end of card's of notice-->
                                     <hr class="text-danger">
 

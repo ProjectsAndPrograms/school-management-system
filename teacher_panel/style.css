@@ -2321,7 +2321,9 @@ td.tableData {
 .teacher-leave-insights .rejected-insight .side-icon {
     background-color: var(--light-danger);
 }
-
+#create-subject-form select{
+    width: 100% !important;
+}
 .teacher-leave-insights .total-staff-insight .side-icon .bx {
     color: var(--primary);
 }

@@ -121,7 +121,7 @@ function completeHandler(event) {
 
     let myToast = new bootstrap.Toast(document.getElementById('liveToast'));
     let liveToast = document.getElementById("liveToast");
-    if (this.responseText === "success") {
+    if (this.responseText.trim() == "success") {
         liveToast.style.backgroundColor = "#BBF7D0";
         liveToast.style.color = 'green';
         document.getElementById('toast-alert-message').innerHTML = "Notice uploaded successfully!";
@@ -130,7 +130,7 @@ function completeHandler(event) {
     } else {
         liveToast.style.backgroundColor = "#FECDD3";
         liveToast.style.color = 'red';
-        document.getElementById('toast-alert-message').innerHTML = "Error- " + this.responseText;
+        document.getElementById('toast-alert-message').innerHTML = "Error- " + this.responseText.trim();
         myToast.show();
     }
 
@@ -434,7 +434,7 @@ var formdata;
             ajax.onreadystatechange = function () {
               
                 if (this.readyState == 4 && this.status == 200) {
-                    if (this.responseText === "success") {
+                    if (this.responseText.trim() == "success") {
                         liveToast.style.backgroundColor = "#BBF7D0";
                         liveToast.style.color = 'green';
                         document.getElementById('toast-alert-message').innerHTML = "Changes Done successfully!";
@@ -443,7 +443,7 @@ var formdata;
                     } else {
                         liveToast.style.backgroundColor = "#FECDD3";
                         liveToast.style.color = 'red';
-                        document.getElementById('toast-alert-message').innerHTML = "Error- " + this.responseText;
+                        document.getElementById('toast-alert-message').innerHTML = "Error- " + this.responseText.trim();
                         myToast.show();
                     }
                     $("#edit-notice").modal('hide');
